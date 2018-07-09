@@ -1,0 +1,37 @@
+{
+  "name": "mn_fun_comm_v2",
+  "version": "1.0.1",
+  "description": "functions from moonlight",
+  "main": "com.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+
+    "ioredis": "^3.2.2",
+    "mongodb": "^3.1.1",
+    "request": "^2.87.0"
+
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menghuiqiang999/mn_fun_comm_v2.git"
+  },
+  "keywords": [
+    "mn_fun_comm_v2",
+    "mn_fun_comm",
+    "moonlight",
+    "comm",
+    "v2"
+  ],
+  "author": "moonlight",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/menghuiqiang999/mn_fun_comm_v2/issues"
+  },
+  "homepage": "https://github.com/menghuiqiang999/mn_fun_comm_v2#readme"
+}
