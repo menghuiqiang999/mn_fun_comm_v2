@@ -12,17 +12,16 @@ const options = {
 
 const content = '孟 会 强 186 0755 8188';
 const com=require('./../com');
-const  mongodb = com.mongodb;
+const  mongodb = new com.Mongodb;
 
-const string = new com.common.String;
-const trim = string.trim;
+
 
 
 const  document = {
     corpId : "123456789" ,
     user : "menghuiqiang2" ,
     content:content ,
-    trimContent: trim(content) ,
+
     timestamp :  Date.now()
 };
 const whereStr= {trimContent:/孟会强/};
@@ -33,25 +32,26 @@ mongodb.setOptions(options);
 
 
 
-/*
+
 mongodb.insert(document,(err,result) => {
     if(err) {console.log(err)}
     console.log(result)
 });
-*/
 
-/*
+
+
 mongodb.find(whereStr,(err,result ) => {
     if(err) {console.log(err)}
     console.log(result)
 });
 
 
+
 mongodb.findSort(whereStr,sortStr,(err,result ) => {
     if(err) {console.log(err)}
     console.log(result)
 });
-*/
+
 
 
 

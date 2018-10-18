@@ -11,14 +11,12 @@ var crypto = require('./crypto/crypto');
 exports.crypto = crypto;
 
 
-var httpx = require('./httpx/httpx');
-exports.httpx = httpx;
+exports.Http = require('./http/Http');
+exports.Https = require('./http/Https');
+exports.File = require('./http/File');
 
 
-
-
-const mongodb = require('./mongodb/mongodb');
-exports.mongodb = mongodb;
+exports.Mongodb = require('./mongodb/Mongodb');
 
 
 var redis = require('./redis/redis');

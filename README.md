@@ -8,11 +8,47 @@
 ##Basic Usage
 
 ##string
+
+###trimAllBlank
+
+参数：str
+
+去掉str前后的空格
+
+return : [err,trimStr] :错误或去掉空格后的 string
+
+example
+
+    const [err,trimStr] = string.trimAllBlank(str);
+
+###hasMobilePhone
+
+参数：str
+
+判断str是不是一个手机号码。如果是返回true,否则返加false
+
+example
+
+    const [err,has]= string.hasMobilephone(mobile);
+
+###firstLowerCase
+
+参数:str
+
+把str的第一个字母小写。
+
+example
+
+    const[err,firstLowerCaseString] = string.firstLowerCase(str)
+
 ###getNonce
 
 param len
+
 returns {[null,number]}
+
 example
+
     const com = require('mn_fun_comm_v2');
     const string = com.string;
     const [err,nonce] = string.getNonce(10);
@@ -284,4 +320,4 @@ example
 example
 
     time.timestampMs();    //返回毫秒 mileSeconds from 1970-1-1 00:00:00
-    time.timestampS();     //返回秒数 Seconds from 1970-1-1 00:00:00   
+    time.timestampS();     //返回秒数 Seconds from 1970-1-1 00:00:00
