@@ -1,6 +1,6 @@
 {
   "name": "mn_fun_comm_v2",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "functions from moonlight",
   "main": "com.js",
   "directories": {

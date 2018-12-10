@@ -18,3 +18,5 @@ console.log(has);
 
 const [e,s]=string.trimAllBlank('blf  孟   会   强  186 0755 8188 ');
 console.log(s);
+
+console.log("the result of Sha1",com.crypto.sha.sha1("1111"));

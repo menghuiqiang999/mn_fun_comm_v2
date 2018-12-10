@@ -1,10 +1,7 @@
 #This is a function from Moonlight
-##Prerequisite:
-    Require: ioredis use: npm install ioredis
-
 #Quick Start
 ##install
-    npm install mn_fun_comm_v2
+    npm install mn_fun_comm_v2 --save
 ##Basic Usage
 
 ##string
@@ -160,24 +157,28 @@ example
 
     var encryped = sha (content);
 
-##httpx
+##http or https
+
+httpx include http and https,such as:
+
+    const com= require("mn_fun_comm_v2");
+
+    const Http = com.Http;
+
+    const Https = com.Https;
+
+    const http= new Http();
+
+    const https= new Https();
+
+    https.get(...)  or http.get(...)
 
 
-###downloadFile
-down a file from the url, and save it in the dir
 
-param url {string}    such as : http://www...........output.jpg
-
-param dir {string}   - the dir you want to save this file
-
-param fileName {string} - the file name you want to save
-
-example
-
-    httpx.downloadFile(url,(err,result) => {  } );
 
 
 ###get
+
 param host - such as  qyapi.weixin.qq.com
 
 param path   - such as /cgi-bin/uer/get?access_token=ACCESS_TOKEN ......
@@ -192,6 +193,7 @@ example
 
 
 ###post
+
 param host - Such as  qyapi.weixin.qq.com
 
 param uri - Such as /cgi-bin/uer/get?access_token=ACCESS_TOKEN ......
@@ -208,6 +210,26 @@ example
     httpx.post (host,path,content,function(err,result){
         ......
     });
+
+###File.download
+
+down a file from the url, and save it in the dir
+
+param url {string}    such as : http://www...........output.jpg
+
+param dir {string}   - the dir you want to save this file
+
+param fileName {string} - the file name you want to save
+
+example
+
+    const com= require("mn_fun_comm_v2");
+
+    const File= com.File;
+
+    const file= new File();
+
+    file.download(url,(err,result) => {  } );
 
 ##Mongodb
 
@@ -296,6 +318,17 @@ Such as:
     redis.getkey(key,function(err,result){
        ......
     });
+
+####expire_time
+
+设置Key的过期时间，为秒为单位。
+
+Such as:
+
+    redis.getkey(key,seconds);
+
+
+
 
 ##time
 ###format_time
